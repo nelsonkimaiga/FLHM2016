@@ -22,18 +22,35 @@
             <h1 class="cover-heading delay-02">2016</h1>
             <h2 class="cover-designation delay-04"><span></span></h2>
             
-            <div class="row" id="description">
-            <div class="small-6 medium-6 large-6 columns">
+        <div class="row" id="description">
+            <div class="small-12 medium-6 large-6 columns">
                 <div id="location">
                     <p>March 6<sup>th</sup> 2016, Nairobi, Kenya. <br>A product of the <a title="Beyond Zero" href="https://twitter.com/hashtag/BeyondZero">#BeyondZero</a> intiative</p>
                 </div>
+            </div>
+            
+            <!--countdown timer-->
+            <div class="small-12 medium-6  large-6 columns">
+                <div id="countdown">
+                    <!--timer will show here-->
+                </div>
+                
             </div>
         </div> 
             
         </div>
              
-        <script src="js/vendor/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="js/foundation.js"></script>
-        <script src="js/app.js"></script>
+        <script src="js/jquery.countdown.min.js"></script>
+        <script src="js/app.js"></script>            
+        <!-- countdown timer javascript code -->
+        <script type="text/javascript">
+            $('#countdown').countdown('2016/03/06', function(event) { //date to countdown
+            $(this).html(event.strftime('Count down to the First Lady Half Marathon: <br>\n\
+    %w weeks %d days %H:%M:%S')); //message that prints out when the code executes
+            });
+        </script>
+        
     </body>
 </html>
